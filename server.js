@@ -1,8 +1,9 @@
 // Author: Veda
 const express= require("express");
 const app=express();
-const cors=require("cors");
+const cors=require("cors"); 
 const mongoose=require("mongoose");
+const Assessment= require("./model/assessmentModel");
 
 app.use(cors());
 app.use(express.json());
@@ -24,7 +25,17 @@ mongoose.Promise = global.Promise;
 
 app.use("/",require("./routes/routes"))
 
+// app.get("/",async(req, res) => {
+//   const assessment= new assessmentModel({questions: "abc@gmail", correctAnswer: "abc", givenAnswer:"xyz" , score: 0});
+//   try{
+//     await assessment.save();
+//   }catch(err){
+//     console.log(err);
+//   }
+   
+// }); 
 
-app.listen(3001, function() {
+
+app.listen(3001, function()  {
     console.log("express server is running on port 3001");
 })

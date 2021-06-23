@@ -1,6 +1,7 @@
 // Author:Sreeevidya
 
 import React, {useState } from "react";
+import axios from "axios";
 import {
     BrowserRouter as Router,
     Switch,
@@ -27,6 +28,18 @@ function Quiz() {
         setStudentAnswerList(childQuestionsstate.studentAnswerList);
     }
 
+
+    function handlleClick(event){
+        event.preventDefault();
+        const newAssessment={
+            
+            // questions:,
+            // correctAnswer:,
+            // givenAnswer
+
+        }
+        axios.post("http://localhost:3001/")
+    }
     return (
             
         <div className="App">

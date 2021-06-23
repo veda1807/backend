@@ -5,9 +5,12 @@ const assessmentSchema={
     questions: String,
     correctAnswer: String,
     givenAnswer: String,
-    // score: String
+    score: Number
 }
 
 const Assessment = mongoose.model("Assessment", assessmentSchema);
 
 module.exports = Assessment;
+
+
+ 
